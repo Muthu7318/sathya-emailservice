@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
 
 app.post("/update", function (req, res) {
   const { name, number, email, subject, message } = req.body;
-  console.log(req.body);
+  console.log("testing---1", req.body);
 
   res.sendFile(path.join(__dirname, "/feedback.html"));
   transporter.sendMail(
@@ -44,6 +44,7 @@ app.post("/update", function (req, res) {
       `,
     },
     function (error, info) {
+      console.log("testing---2");
       if (error) {
         console.log("email err", error);
       } else {
