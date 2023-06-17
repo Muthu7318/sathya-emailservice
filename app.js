@@ -29,7 +29,7 @@ app.post("/update", function (req, res) {
   transporter.sendMail(
     {
       from: "portfolio",
-      to: "sathya98.cs@gmail.com",
+      to: "nmuthukumaranm@gmail.com",
       subject: `${name} tried contacting you...`,
       text: `Hi Sathya, you received email from portfolio. Below are the details
       name: ${name},
