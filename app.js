@@ -29,7 +29,6 @@ app.post("/update", function (req, res) {
   const { name, number, email, subject, message } = req.body;
   console.log("testing---1", req.body);
 
-  res.sendFile(path.join(__dirname, "/feedback.html"));
   transporter.sendMail(
     {
       from: "portfolio",
@@ -52,6 +51,7 @@ app.post("/update", function (req, res) {
       }
     }
   );
+  res.sendFile(path.join(__dirname, "/feedback.html"));
 });
 
 app.listen(3000, () => {
