@@ -21,6 +21,10 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.get("/", (req, res) => {
+  res.send("this is an email service");
+});
+
 app.post("/update", function (req, res) {
   const { name, number, email, subject, message } = req.body;
   console.log(req.body);
