@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const path = require("path");
 require("dotenv").config();
+const cors = require("cors");
 
 console.log(process.env.emailaddress);
 
@@ -18,6 +19,11 @@ const transporter = nodemailer.createTransport({
 });
 
 const app = express();
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
